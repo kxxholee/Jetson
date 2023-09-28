@@ -11,6 +11,8 @@ from tqdm import tqdm
 from net import LeNet
 from utils import baseDataset
 
+# python3 main.py --epochs 35 --lr 1e-3 --optimizer Adam
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--root", type=str, default="./datasets/CIFAR-10")
 parser.add_argument("--epochs", type=int, default=30)
@@ -51,7 +53,6 @@ if __name__ == "__main__":
     criterion = CrossEntropyLoss()
     optimizer_type = get_optimizer(opt.optimizer)
     optimizer = optimizer_type(net.parameters(), lr=opt.lr)
-
 
     for epoch in range(1, opt.epochs+1):  # 'epochs'를 'epoch'로 수정
         train_loss = 0.0

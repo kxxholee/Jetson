@@ -10,29 +10,43 @@ class ConvBNAct(nn.Module):
             nn.ReLU()
         )
     def forward(self, x):
-        x = self.body(x)
-        return x
+        return self.body(x)
+
+class ResidualBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, stride=1):
+        super(ResidualBlock, self).__init__()
+        self.conv1 = ConvBNAct(in_channels, out_channels, kernel_size=3, stride=stride, padding=1)
+        self.conv2 = ConvBNAct(out_channels, out_channels, kernel_size=3, stride=1, padding=1)
+        self.shortcut = nn.Sequential()
+        if stride != 1 or in_channels != out_channels:
+            self.shortcut = ConvBNAct(in_channels, out_channels, kernel_size=1, stride=stride, padding=0)
     
+    def forward(self, x):
+        out = self.conv1(x)
+        out = self.conv2(out)
+        out = out + self.shortcut(x)  # Fixed the in-place operation here
+        return out
+
 class LeNet(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.conv1 = ConvBNAct(3, 6, kernel_size=5, stride=1, padding=0)
-        self.pool1 = nn.AvgPool2d(kernel_size=2, stride=2)
-        self.conv2 = ConvBNAct(6, 16, kernel_size=5, stride=1, padding=0)
-        self.pool2 = nn.AvgPool2d(kernel_size=2, stride=2)
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 10)
+    def __init__(self, num_classes=10):
+        super(LeNet, self).__init__()
+        self.features = nn.Sequential(
+            ConvBNAct(3, 32, kernel_size=3, stride=1, padding=1),
+            ResidualBlock(32, 32),
+            ResidualBlock(32, 64, stride=2),
+            ResidualBlock(64, 64),
+            ResidualBlock(64, 128, stride=2),
+            ResidualBlock(128, 128)
+        )
+        self.classifier = nn.Sequential(
+            nn.AdaptiveAvgPool2d((1,1)),
+            nn.Flatten(),
+            nn.Linear(128, num_classes)
+        )
 
     def forward(self, x):
-        x = self.conv1(x)
-        x = self.pool1(x)
-        x = self.conv2(x)
-        x = self.pool2(x)
-        x = x.view(x.size(0), -1)
-        x = self.fc1(x)
-        x = self.fc2(x)
-        x = self.fc3(x)
+        x = self.features(x)
+        x = self.classifier(x)
         return x
 
 if __name__ == "__main__":
@@ -40,5 +54,5 @@ if __name__ == "__main__":
     net = LeNet()
     dummy_input = torch.randn(16, 3, 32, 32)
     dummy_output = net(dummy_input)
-    print(f"# intput shape = {dummy_input.shape}")
+    print(f"# input shape = {dummy_input.shape}")
     print(f"# output shape = {dummy_output.shape}")
