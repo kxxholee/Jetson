@@ -1,5 +1,5 @@
-# RaspberryPi
-### **github repository for Raspberry Pi projects**
+# **Github** *for* **Large Files**
+### **github Deep-Learning Projects Directory (Source Codes)**
 
 ## Git LFS
 Git LFS는 대용량의 파일을 별도의 서버에 올리고, 원래 위치에는 포인터를 남긴다.  
