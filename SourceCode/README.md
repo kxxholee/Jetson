@@ -1,9 +1,13 @@
 # **Github** *for* **Large Files**
-### **github Deep-Learning Projects Directory (Source Codes)**
+### **Github Deep-Learning Projects Directory (Source Codes)**
 
 ## Git LFS
 Git LFS는 대용량의 파일을 별도의 서버에 올리고, 원래 위치에는 포인터를 남긴다.  
 즉, 대용량 파일은 다른 서버에서 받아오고 있지만, 포인터가 설정되어 있으므로, 사용자는 git push, git pull등을 그대로 사용할 수 있다
+
+### 0. Git LFS 사용 동기
+Raspberry Pi 를 위한 Custom Buildroot를 Github에 업로드하려는 시도를 했었다.
+대용량 파일들을 commit 및 push하기 위해 필요했지만, 전체 Repository의 용량 제한으로 실패했다.
 
 ### 1. Git LFS 설치하기
 ```bash
