@@ -9,9 +9,9 @@ if __name__ == "__main__":
 
     # modelB
     model_b = modelB()
-
-    input = torch.randn(16, 3, 28, 28)
-
+    
+    input = torch.randn(16, 3, 28, 8
+    
     # 연산량 및 파라미터 수 계산
     modelA_flops, modelA_params = thop.profile(model_a, inputs=(input,))
     modelB_flops, modelB_params = thop.profile(model_b, inputs=(input,))
