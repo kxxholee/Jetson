@@ -3,7 +3,7 @@ import torch.nn as nn
 import thop
 
 class ConvBNAct(nn.Module):
-    def __init__(sefl, in_feat, out_feat, kernel_size, stride, padding):
+    def __init__(self, in_feat, out_feat, kernel_size, stride, padding):
         super().__init__()
         self.body = nn.Sequential(
             nn.Conv2d(in_feat, out_feat, kernel_size, stride, padding, bias=False),
