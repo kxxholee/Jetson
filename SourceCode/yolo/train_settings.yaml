@@ -1,0 +1,6 @@
+# Dataset PATH
+train: /path/to/train/images
+val: /path/to/val/images
+
+nc: 3
+names: ['class1', 'class2', 'class3']
