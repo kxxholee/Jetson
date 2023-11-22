@@ -1,4 +1,4 @@
-# **Github** *for* **Large Files**
+# :octocat:**Github** *for* **Large Files**
 Git LFS는 대용량의 파일을 별도의 서버에 올리고, 원래 위치에는 포인터를 남긴다.  
 즉, 대용량 파일은 다른 서버에서 받아오고 있지만, 포인터가 설정되어 있으므로, 사용자는 git push, git pull등을 그대로 사용할 수 있다
 
