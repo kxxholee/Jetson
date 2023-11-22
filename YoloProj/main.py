@@ -10,3 +10,4 @@ model = YOLO('yolov8n.yaml')
 
 
 
+
