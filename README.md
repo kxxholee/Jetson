@@ -50,4 +50,4 @@
 
 ### 참고
 * 팀원들의 역할 분담 및 프로젝트 구성은 [이 문서](./RolesGuide.md)를 참고
-* 대용량 파일들을 포함한 Git Repository 관리는 [이 문서](./ExampleCodes/README.md)를 참고
+* 대용량 파일들을 포함한 Git Repository 관리는 [이 문서](./LfsGuide.md)를 참고
