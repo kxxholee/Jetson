@@ -1,12 +1,12 @@
 # Docker 🐳
 
 > ***TODO list***
-> - [ ] Windows에서의 Docker 사용에 대한 조사
+> - ~[ ] Windows에서의 Docker 사용에 대한 조사~
 > - [x] Docker 환경을 만들고 업로드
 > - [x] Docker 환경에 기초적인 의존성 설치
-> - [ ] Docker 환경에 NVIDIA Driver와 관련 라이브러리 설치
-> - [ ] Docker Hub 접속하기 위한 준비물 안내  
-> - [ ] README 작성
+> - ~[ ] Docker 환경에 NVIDIA Driver와 관련 라이브러리 설치~
+> - [X] Docker Hub 접속하기 위한 준비물 안내  
+> - [X] README 작성
 
 ## 0. Docker란? 
 Docker는 어떤 가상 환경을 만들어서 배포하기 위한 목적으로 사용된다. 원하는 os를 선택해 가상의 환경을 만들고, 원하는 의존성들을 설치해서 나만의 환경을 만들 수 있다.
