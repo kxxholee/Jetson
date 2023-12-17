@@ -29,5 +29,8 @@ PyTorch, Ultralytics등이 사전에 설치되어 있습니다.
 - 한번 실행했다고 영구적인 것이 아니므로 재부팅 시마다 실행해 주어야 합니다
 
 # 데이터셋 준비 : yaml파일 설정 및 train / val 파일
-이거 내일 일어나면 꼭 쓰기
-[https://universe.roboflow.com/dnd4321/wild-animal-ga3ri/dataset/4](https://universe.roboflow.com/dnd4321/wild-animal-ga3ri/dataset/4)
+이거 내일 일어나면 꼭 쓰기 (데이터셋임 - train, val, test)  
+[https://universe.roboflow.com/dnd4321/wild-animal-ga3ri/dataset/4](https://universe.roboflow.com/dnd4321/wild-animal-ga3ri/dataset/4)  
+그 외 참고자료 있음  
+[https://docs.ultralytics.com/modes/train/](https://docs.ultralytics.com/modes/train/)  
+[https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb#scrollTo=kUMOQ0OeDBJG](https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb#scrollTo=kUMOQ0OeDBJG)  
