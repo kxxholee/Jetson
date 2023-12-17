@@ -3,7 +3,7 @@
 > * 👩‍💻 [역할분담](./RolesGuide.md)
 > * 📝 [대용량 파일 관리법](./LfsGuide.md)
 > * 🐳 [Docker 사용법](./DockerGuide.md)
-> * 📝 [레포트 참고자료!!](./REPORT.md)
+> * 📝 [최종 레포트 참고자료!!](./REPORT.md)
 
 ### YOLOv8
 * YOLOv8 을 다운로드하려면 다음과 같은 절차를 따를 수 있다.
