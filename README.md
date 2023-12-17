@@ -5,9 +5,6 @@
 > * 🐳 [Docker 사용법](./DockerGuide.md)
 > * 📝 [레포트 참고자료!!](./REPORT.md)
 
-> [!TODO]
-> * 1
-> * 2
 ### YOLOv8
 * YOLOv8 을 다운로드하려면 다음과 같은 절차를 따를 수 있다.
 * pip과 conda, git을 이용한 다운로드 방법만을 다뤘다.
