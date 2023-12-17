@@ -28,6 +28,6 @@ PyTorch, Ultralytics등이 사전에 설치되어 있습니다.
 - `+local:root`: 로컬에서 실행되는 `root` 사용자에게 X 서버에 접근할 수 있는 권한을 부여합니다. 이는 Docker 컨테이너에서 GUI 애플리케이션을 실행할 때 필요합니다.
 - 한번 실행했다고 영구적인 것이 아니므로 재부팅 시마다 실행해 주어야 합니다
 
-# 데이터셋 준비 : .yaml파일 설정 및 train / val 파일
+# 데이터셋 준비 : yaml파일 설정 및 train / val 파일
 이거 내일 일어나면 꼭 쓰기
 [https://universe.roboflow.com/s-wy8xj/wild-animal-khqwa/dataset/6](https://universe.roboflow.com/s-wy8xj/wild-animal-khqwa/dataset/6)
