@@ -1,4 +1,7 @@
 # 개발 환경 세팅 : Run Docker Image
+Docker Image는 Ultralytics에서 제공하는 Jetson용 Image를 사용했습니다.  
+PyTorch, Ultralytics등이 사전에 설치되어 있습니다.  
+사용한 Docker Image의 출처는 [여기 클릭!](https://hub.docker.com/r/ultralytics/ultralytics) (tags $\rightarrow$ latest-jetson)
 ## 1. Docker 권한 설정 (강의자료 참고)
 1. 환경 변수 설정 (작업 간편하게)  
 <code>t=ultralytics/ultralytics:latest-jetson</code><br>
